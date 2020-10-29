@@ -1,4 +1,4 @@
-# QA-WebTesting-BDD-Java -- IN PROGRESS
+# QA-WebTesting-BDD-Java
 Web testing project using Cucumber, Selenium and Java.
 
 
