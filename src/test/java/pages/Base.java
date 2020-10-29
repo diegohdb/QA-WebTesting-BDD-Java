@@ -47,7 +47,9 @@ public class Base {
 //        browser.get(prop.getProperty("url"));
     }
 
-
+    public static void closeBrowser(){
+        browser.quit();
+    }
 
     public void Visit(String url){
         browser.get(url);

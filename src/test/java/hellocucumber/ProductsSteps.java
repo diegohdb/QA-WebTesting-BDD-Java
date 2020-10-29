@@ -44,6 +44,7 @@ public class ProductsSteps extends Base {
         assert productPage.GetToastMessage().equals("Produto adicionado com sucesso");
         productEditionPage = new ProductEdition();
         assert productEditionPage.IsInScreen();
+        Base.closeBrowser();
     }
 
     @Given("I insert {string}")
@@ -57,6 +58,7 @@ public class ProductsSteps extends Base {
     public void theProductListIsLoadedAndTheIsNotAdded(String arg0) {
         List products = productsPage.GetAllProductsNames();
         assertFalse(products.contains(arg0));
+        Base.closeBrowser();
     }
 
     @And("I go to products list")
@@ -78,6 +80,7 @@ public class ProductsSteps extends Base {
         assert message.equals("Produto removido com sucesso");
         List products = productsPage.GetAllProductsNames();
         assertFalse(products.contains(arg0));
+        Base.closeBrowser();
     }
 
     @When("I click on the {string}")
@@ -98,5 +101,6 @@ public class ProductsSteps extends Base {
         assert name.equals(arg0);
         assert value.equals(arg1);
         assert colors.equals(arg2);
+        Base.closeBrowser();
     }
 }

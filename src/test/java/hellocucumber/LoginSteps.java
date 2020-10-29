@@ -33,10 +33,12 @@ public class LoginSteps extends Base {
     public void the_user_is_granteed_to_the_website() {
         productsPage = new Products();
         assert productsPage.IsInScreen();
+        Base.closeBrowser();
     }
 
     @Then("the user is not allowed to login the website")
     public void theUserIsNotAllowedToLoginTheWebsite() {
         assert loginPage.IsToast();
+        Base.closeBrowser();
     }
 }
